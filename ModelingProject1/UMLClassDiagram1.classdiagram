@@ -1,0 +1,344 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="0961763a-2e3f-4132-930f-d220a949fe71" name="UMLClassDiagram1" linkedPackageId="0fa89faf-4564-479d-83a7-24290cf499f0" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+  <profileInstances>
+    <packageHasProfileInstances Id="0f9542b0-0622-4b01-88d2-9b4722510c6e">
+      <profileInstance Id="448a4ffb-0364-40d3-b59d-1371b715e483" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="e9def34c-6c8c-4ccb-86e9-2e12903db509">
+      <profileInstance Id="a850cf20-bd15-422b-9f71-413aee18f456" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="29c79836-ec75-4f2f-848f-9a0b01efdd1e" name="AbstractFactoryApp" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="4aa61bdf-d5f4-4828-9203-d79ba6a00809" />
+        <targetEnds>
+          <association Id="b26b625b-d4ee-4c20-bae8-15cef26a901d" isDerived="false" sourceEndRoleName="AbstractFactoryApp" targetEndRoleName="ClientFactory" isLeaf="false" isAbstract="false">
+            <classMoniker Id="dcca2100-2a84-4e50-9d37-e3ede4fe6db5" LastKnownName="ClientFactory" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="ddc6e6b2-3a75-404e-b143-90e1035fbd01" name="AbstractFactoryApp" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="08639f9a-0830-42f2-9cd7-186780ff3727" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="4c2d60ac-ab7c-4a83-97c9-0d0ff0584ffd" name="ClientFactory" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="1caa35d6-03c8-4083-864b-33d7b1b973d7" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="5b9ffb00-503e-4711-9b36-4accb5088e9d" />
+          </association>
+        </targetEnds>
+        <ownedOperationsInternal>
+          <operation Id="72051868-0166-4919-8b16-7f9296fca0eb" name="Main" isLeaf="false" isStatic="true" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="82b21a67-5684-4871-b185-183b45c5358e" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <Interface Id="01b90ce0-f233-4d81-9511-b3ca9423653f" name="ICarFactory" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="320f444a-6d34-4ce6-a34a-bebb4626da22" />
+        <ownedOperations>
+          <operation Id="0690af06-ce02-4f34-ac29-8de1d915bca5" name="CreateCar" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="0a0cb5f5-182f-4813-a67f-c9398c80eded" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="26694e33-d245-4e04-9e4c-82baa4d29f2b" direction="Return">
+                  <elementDefinition Id="2677009d-5c3b-43af-9183-709a0a9d4ec2" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="73d782bc-b241-426b-a690-a410ac861721" LastKnownName="Car" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="ff7352bd-90b7-4de0-a97c-178e3adc4aa5" name="CreateEngine" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="810b24b6-e5f3-45b8-8b77-ec0b4d45085d" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="eeca5922-a58a-4e02-8fed-2eb8bc1758ac" direction="Return">
+                  <elementDefinition Id="b37f9dbf-c5a3-499c-b27e-518568776a5b" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="c0fe4195-dff7-4f69-8e37-ba51865a1590" LastKnownName="Engine" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperations>
+      </Interface>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="ed0038dd-4dd9-434d-a9b3-a5d6ea01d731" name="Car" isAbstract="true" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="365b55ba-0200-45de-87ec-05203ad993a0" />
+        <ownedOperationsInternal>
+          <operation Id="36d25dce-3a0a-496a-a52d-e747d9dd013f" name="Info" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="850fd169-f4c0-4eb8-bc9c-adebb20fd9ef" />
+          </operation>
+          <operation Id="5769e0bb-df89-4ef6-aef3-f772f491c010" name="Interact" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="da82ddcb-dc07-458e-a0c3-d6574be35a5e" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="3185cc63-88d9-4d80-9d55-1d8919f0f7e7" name="Engine" isAbstract="true" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="7137ce8d-4e33-4ea8-829b-9578cadffae3" />
+        <ownedOperationsInternal>
+          <operation Id="52dfaeda-1b27-41ca-846e-a6b0f614fc45" name="GetPower" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="2b17caa6-5885-4902-bcd4-c2c8ac795347" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <packageHasNamedElement>
+      <referencedType Id="73d782bc-b241-426b-a690-a410ac861721" name="Car" isAbstract="false" isLeaf="false" cachedFullName="ModelingProject1::Car">
+        <elementDefinition Id="365b55ba-0200-45de-87ec-05203ad993a0" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="c0fe4195-dff7-4f69-8e37-ba51865a1590" name="Engine" isAbstract="false" isLeaf="false" cachedFullName="ModelingProject1::Engine">
+        <elementDefinition Id="7137ce8d-4e33-4ea8-829b-9578cadffae3" />
+      </referencedType>
+    </packageHasNamedElement>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="602c61e4-1d52-4e31-b1b6-06f8abbe3eab" name="Ford" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="25e34ea9-abb2-4fc1-8929-4ef4b706e1b6" />
+        <generalsInternal>
+          <generalization Id="93db47fe-efac-474e-b08b-1f6a2c3daac3" isSubstitutable="false">
+            <classMoniker Id="ed0038dd-4dd9-434d-a9b3-a5d6ea01d731" LastKnownName="Car" />
+            <elementDefinition Id="5f16fbcb-bd51-45e6-b209-c7f4113ca4a6" />
+          </generalization>
+        </generalsInternal>
+        <ownedOperationsInternal>
+          <operation Id="592e3706-b06f-4654-9925-ac39a2a5fac1" name="Info" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="aa7f4cb5-5616-4409-bd18-b4434e26a391" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="49a3332e-9905-4c17-95dd-a5e19622f6fb" name="Toyota" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="518acd0c-dc8a-4640-8376-efbb42da3bb9" />
+        <generalsInternal>
+          <generalization Id="03bd3c57-308c-4f17-bf6f-2cc05d99ee64" isSubstitutable="false">
+            <classMoniker Id="ed0038dd-4dd9-434d-a9b3-a5d6ea01d731" LastKnownName="Car" />
+            <elementDefinition Id="680db5c7-1be5-4594-be36-f7b4577b4909" />
+          </generalization>
+        </generalsInternal>
+        <ownedOperationsInternal>
+          <operation Id="012c1262-7f1e-4246-8580-8d89e168b7a3" name="Info" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="e89d96a3-00d7-4cc8-a1bd-0d8fcfc7c508" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="42938495-0d25-4acd-8edc-da15541cccab" name="FordEngine" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="991c7312-69ec-46ac-85a9-607e8e28b80f" />
+        <generalsInternal>
+          <generalization Id="0c141fee-2f60-497a-9e51-36f6a8385471" isSubstitutable="false">
+            <classMoniker Id="3185cc63-88d9-4d80-9d55-1d8919f0f7e7" LastKnownName="Engine" />
+            <elementDefinition Id="801f3f78-0c5a-4389-86dd-e136920c4694" />
+          </generalization>
+        </generalsInternal>
+        <ownedOperationsInternal>
+          <operation Id="093acb7c-6fb9-4fff-b83b-36134915f0ac" name="GetPower" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="9146a4e5-66c2-4969-9153-4f7de5c8575d" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="6654874e-1bfd-4ace-9eb4-1281741e26f3" name="ToyotaEngine" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="fb932163-1b55-43d3-adf3-086e80954dbf" />
+        <generalsInternal>
+          <generalization Id="618c8aba-d4be-4a96-8eaa-70ab8e92eac7" isSubstitutable="false">
+            <classMoniker Id="3185cc63-88d9-4d80-9d55-1d8919f0f7e7" LastKnownName="Engine" />
+            <elementDefinition Id="ab3f029a-fabe-40ff-a499-d7244fc4c243" />
+          </generalization>
+        </generalsInternal>
+        <ownedOperationsInternal>
+          <operation Id="bed24150-4895-4e27-98a5-e74b56c0924b" name="GetPower" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="e46fd85a-f1e8-4a8f-8a19-660535a8f271" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="8a6cd8e9-7aca-4ea9-b526-20e83f9d8fdf" name="FordFactory" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="a9b65755-f1bf-42de-b0a9-4ba5fc128081" />
+        <suppliersInternal>
+          <interfaceRealization Id="a62ae293-4697-401f-a83b-b7fcacd5daac">
+            <interfaceMoniker Id="01b90ce0-f233-4d81-9511-b3ca9423653f" LastKnownName="ICarFactory" />
+            <elementDefinition Id="a385394c-7a93-4a58-b1ac-f1a1c6cd56c4" />
+          </interfaceRealization>
+          <dependency Id="b272a382-ea1d-43e4-9464-b1db903461b2" name="&quot;Instantiate&quot;">
+            <classMoniker Id="602c61e4-1d52-4e31-b1b6-06f8abbe3eab" LastKnownName="Ford" />
+            <elementDefinition Id="c3e7843b-3fae-47b0-810c-895ddefce787" />
+          </dependency>
+          <dependency Id="df0acd6f-84e1-4df9-a69d-9ae24d7f2078" name="&quot;Instantiate&quot;">
+            <classMoniker Id="42938495-0d25-4acd-8edc-da15541cccab" LastKnownName="FordEngine" />
+            <elementDefinition Id="c5f1332e-3d05-4be8-af43-ed64f5a25fb5" />
+          </dependency>
+        </suppliersInternal>
+        <ownedOperationsInternal>
+          <operation Id="72f257ea-a1aa-48a0-98a2-28bf77373991" name="CreateCar" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="d991b8ec-dadd-45d6-9977-c40b314bddc7" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="2aaab8a0-ab9a-4c73-adf4-f852ef8420b4" direction="Return">
+                  <elementDefinition Id="6e1926c6-2578-4c66-adc3-e4f73c66d471" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="73d782bc-b241-426b-a690-a410ac861721" LastKnownName="Car" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="6e91492e-b1ed-452f-90b7-2d124b306c3a" name="CreateEngine" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="82ef6af6-46ed-4d77-9dd5-8243e1010f8b" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="fb51bcd0-7644-41a9-bb06-4b6c73dd3069" direction="Return">
+                  <elementDefinition Id="16271558-36ba-4921-a9d7-6edf562d4955" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="c0fe4195-dff7-4f69-8e37-ba51865a1590" LastKnownName="Engine" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="894c1560-5f02-4dc5-93ae-182138396797" name="ToyotaFactory" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="8d82a927-da6c-41e3-9589-b586571897df" />
+        <suppliersInternal>
+          <interfaceRealization Id="31dc891f-8154-4344-8f5a-08627dfef5f2">
+            <interfaceMoniker Id="01b90ce0-f233-4d81-9511-b3ca9423653f" LastKnownName="ICarFactory" />
+            <elementDefinition Id="bddc6af1-a68a-475f-8da6-b3d6c152dc14" />
+          </interfaceRealization>
+          <dependency Id="97214f8b-08cd-4391-8ab4-7decc6d381a4" name="&quot;Instantiate&quot;">
+            <classMoniker Id="49a3332e-9905-4c17-95dd-a5e19622f6fb" LastKnownName="Toyota" />
+            <elementDefinition Id="b931a9fe-d3e7-41f0-b780-533dabd58dda" />
+          </dependency>
+          <dependency Id="0a4563b9-e159-4fcf-b714-7850b495aa7c" name="&quot;Instantiate&quot;">
+            <classMoniker Id="6654874e-1bfd-4ace-9eb4-1281741e26f3" LastKnownName="ToyotaEngine" />
+            <elementDefinition Id="52fae078-4588-4e91-b565-6d2be1b3df3e" />
+          </dependency>
+        </suppliersInternal>
+        <ownedOperationsInternal>
+          <operation Id="d1b5147a-4ee6-4331-801e-ce7aaced04cc" name="CreateCar" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="409112e9-b04f-4ac8-94b1-cc3710ce65bb" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="f45ed16e-6a7a-4c1c-b6a4-66c1c18c5fd3" direction="Return">
+                  <elementDefinition Id="c79c65bd-09c4-4fa3-bd59-19ee32d13d3d" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="73d782bc-b241-426b-a690-a410ac861721" LastKnownName="Car" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="52adbc82-16de-4d21-a392-aaf11d9903fe" name="CreateEngine" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="6f7e0db3-7651-47b5-b278-e81ecc3134f9" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="8b878a0f-ef79-4579-8366-6cfc78fc9514" direction="Return">
+                  <elementDefinition Id="2fa73ab3-4f63-4e80-9f86-c4a1ff40aa5d" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="c0fe4195-dff7-4f69-8e37-ba51865a1590" LastKnownName="Engine" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="dcca2100-2a84-4e50-9d37-e3ede4fe6db5" name="ClientFactory" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="8b227ded-4d35-4ef4-afcb-a854761c9bb0" />
+        <targetEnds>
+          <association Id="1479dee3-2292-4471-990e-29fdba7ae9ac" isDerived="false" sourceEndRoleName="ClientFactory" targetEndRoleName="Car" isLeaf="false" isAbstract="false">
+            <classMoniker Id="ed0038dd-4dd9-434d-a9b3-a5d6ea01d731" LastKnownName="Car" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="5db1b338-22ac-42ea-8b89-89ff25bfb937" name="ClientFactory" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Composite" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="cb238ae1-133b-43ab-a053-3d67b8394970" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="3dce5b95-7d84-4918-b954-512661adbc10" name="Car" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="true">
+                  <elementDefinition Id="59e3e992-f8ee-4b21-896c-17085eb9ea11" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="4c711431-3ed8-4bf2-9360-d756dae24d88" />
+          </association>
+          <association Id="56276e70-6a8d-4bf7-ae01-a32a8c342747" isDerived="false" sourceEndRoleName="ClientFactory" targetEndRoleName="Engine" isLeaf="false" isAbstract="false">
+            <classMoniker Id="3185cc63-88d9-4d80-9d55-1d8919f0f7e7" LastKnownName="Engine" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="e2971021-dd42-4561-8b54-071c91af9cf9" name="ClientFactory" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Composite" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="2927db5c-e013-41d9-8dee-dc35ac33fdde" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="0d553b05-0375-4596-bde7-ce5632d0ac26" name="Engine" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="true">
+                  <elementDefinition Id="777790db-c26a-4494-9949-0754676380d9" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="9065f094-e9d6-4ef7-bda8-da33133de33d" />
+          </association>
+        </targetEnds>
+        <ownedOperationsInternal>
+          <operation Id="304ace34-28e0-45b1-bb27-189e48a251ab" name="ClientFactory" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="3880ae0d-e2f0-433b-997e-c2a47f12c18f" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="b2891f7d-e31d-4461-91ef-14a18bb2df6c" name="factory" direction="In">
+                  <elementDefinition Id="133836a6-8d3e-4d6a-9268-b961e157032a" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="a44d3ca7-0a42-4547-b996-bebf8027f621" LastKnownName="ICarFactory " />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="187e6c31-ca79-4ee3-afa8-dea12ab48866" name="Run" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="90a0313c-fced-4361-84b0-4557e67a56e2" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <packageHasNamedElement>
+      <referencedType Id="a44d3ca7-0a42-4547-b996-bebf8027f621" name="ICarFactory " isAbstract="false" isLeaf="false" cachedFullName="ICarFactory ">
+        <elementDefinition Id="c2e0e611-a5bd-4234-8ced-6ceece25052e" />
+      </referencedType>
+    </packageHasNamedElement>
+  </packagedElements>
+  <package Id="0fa89faf-4564-479d-83a7-24290cf499f0" name="ModelingProject1">
+    <elementDefinition Id="e8dab98b-f51b-4d38-afcd-db8bd2c061df" />
+    <profileInstances>
+      <packageHasProfileInstances Id="e2c50bc4-ca8d-4942-9b11-c64457c70e3d">
+        <profileInstance Id="300ea3c4-648e-4adf-95ae-a2a035c31e1c" name="TextTemplateBindings">
+          <elementDefinition Id="4a646abf-a0dc-4e33-98b8-b69272c860e5" />
+        </profileInstance>
+        <elementDefinition Id="dea567e2-85fe-40c3-a470-a94b5809a85c" />
+      </packageHasProfileInstances>
+    </profileInstances>
+  </package>
+</logicalClassDesignerModel>
